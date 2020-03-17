@@ -6,11 +6,11 @@ CURRENT_DIR="$(cd "$(dirname "$0")" && pwd)"
 #fi
 
 if [[ $XXH_VERBOSE == '2' ]]; then
-  echo Run $CURRENT_DIR/.zshrc
+  echo Run $CURRENT_DIR/../../.zshrc
 fi
 
 setopt +o nomatch
-for pluginrc_file in $CURRENT_DIR/../../../plugins/**/*-zsh-*/build/pluginrc.zsh; do
+for pluginrc_file in $CURRENT_DIR/../../../../../plugins/**/*-zsh-*/build/pluginrc.zsh; do
   if [[ -f $pluginrc_file ]]; then
     plugin_name=`basename $(dirname $(dirname $pluginrc_file))`
 

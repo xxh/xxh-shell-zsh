@@ -2,7 +2,7 @@
 ## Install
 Install from xxh repo:
 ```
-xxhp i xxh-shell-zsh-romkatv
+xxh +I xxh-shell-zsh-romkatv
 ```
 Install from any repo:
 ```

@@ -74,6 +74,6 @@ if [[ ! -f .entrypoint-check-done ]]; then
   fi
 fi
 
-export XXH_HOME=`realpath $CURRENT_DIR/../../../..`
+export XXH_HOME=`dirname $CURRENT_DIR/../../../../p`
 export HISTFILE=$XXH_HOME/.zsh_history
 ./zsh.sh $EXECUTE_FILE "${EXECUTE_COMMAND[@]}"

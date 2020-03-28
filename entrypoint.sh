@@ -74,7 +74,7 @@ if [[ ! -f .entrypoint-check-done ]]; then
   fi
 fi
 
-export XXH_HOME=`dirname $CURRENT_DIR/../../../../p`
+export XXH_HOME=`readlink -f $CURRENT_DIR/../../../..`
 export XDG_CONFIG_HOME=$XXH_HOME/.config
 export HISTFILE=$XXH_HOME/.zsh_history
 ./zsh.sh $EXECUTE_FILE "${EXECUTE_COMMAND[@]}"

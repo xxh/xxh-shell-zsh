@@ -76,8 +76,13 @@ if [[ ! -f .entrypoint-check-done ]]; then
 fi
 
 export XXH_HOME=`readlink -f $CURRENT_DIR/../../../..`
+
+if [[ ! -d $XXH_HOME/.local/share/zsh ]]; then
+  mkdir -p $XXH_HOME/.local/share/zsh
+fi
+
 export XDG_CONFIG_HOME=$XXH_HOME/.config
-export HISTFILE=$XXH_HOME/.zsh_history
+export HISTFILE=$XXH_HOME/.local/share/zsh/.zsh_history
 
 if [[ $HOMEPATH != '' ]]; then
   homerealpath=`readlink -f $HOMEPATH`

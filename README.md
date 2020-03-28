@@ -2,21 +2,21 @@
 ## Install
 Install from xxh repo:
 ```
-xxh +I xxh-shell-zsh-romkatv
+xxh +I xxh-shell-zsh
 ```
 Install from any repo:
 ```
-xxh +I xxh-shell-zsh-romkatv+git+https://github.com/xxh/xxh-shell-zsh-romkatv
+xxh +I xxh-shell-zsh+git+https://github.com/xxh/xxh-shell-zsh
 ```
 Connect:
 ```
-xxh myhost +s zsh-romkatv
+xxh myhost +s zsh
 ```
 To avoid adding `+s` every time use xxh config in `~/.config/xxh/config.xxhc` (`$XDG_CONFIG_HOME`):
 ```
 hosts:
   ".*":                     # Regex for all hosts
-    +s: zsh-romkatv
+    +s: zsh
 ```
 
 ## Plugins

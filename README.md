@@ -6,16 +6,17 @@ xxh +I xxh-shell-zsh-romkatv
 ```
 Install from any repo:
 ```
-cd ~/.xxh/xxh/shells/
-git clone https://github.com/xxh/xxh-shell-zsh-romkatv
-./xxh-shell-zsh/build.sh
-xxh myhost +s xxh-shell-zsh-romkatv
+xxh +I xxh-shell-zsh-romkatv+git+https://github.com/xxh/xxh-shell-zsh-romkatv
+```
+Connect:
+```
+xxh myhost +s zsh-romkatv
 ```
 To avoid adding `+s` every time use xxh config in `~/.config/xxh/config.xxhc` (`$XDG_CONFIG_HOME`):
 ```
 hosts:
   ".*":                     # Regex for all hosts
-    +s: xxh-shell-zsh-romkatv
+    +s: zsh-romkatv
 ```
 
 ## Plugins

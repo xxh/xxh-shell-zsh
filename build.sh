@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 CDIR="$(cd "$(dirname "$0")" && pwd)"
-build_dir=$CDIR/build
 
 while getopts A:K:q option
 do
@@ -13,15 +12,19 @@ do
   esac
 done
 
+build_dir=$CDIR/build
+
 rm -rf $build_dir
 mkdir -p $build_dir
 
-for f in entrypoint.sh .zshrc zsh.sh
+for f in entrypoint.sh zsh.sh
 do
     cp $CDIR/$f $build_dir/
 done
+cp $CDIR/zshrc $build_dir/.zshrc
 
-url='https://github.com/romkatv/zsh-bin/releases/download/v2.0.0/zsh-5.8-linux-x86_64-static.tar.gz'
+distfile=zsh-5.8-linux-x86_64
+url="https://github.com/romkatv/zsh-bin/releases/download/v3.0.1/$distfile.tar.gz"
 tarname=`basename $url`
 
 cd $build_dir
@@ -39,4 +42,5 @@ else
 fi
 
 tar -xzf $tarname
+mv $distfile zsh-bin
 rm $tarname

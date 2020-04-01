@@ -2,7 +2,7 @@
 
 CDIR="$(cd "$(dirname "$0")" && pwd)"
 
-zshbin='zsh-5.8-linux-x86_64-static'
+zshbin='zsh-bin'
 
 zsh_dir=''
 if [ -f $CDIR/.zsh_dir ]; then

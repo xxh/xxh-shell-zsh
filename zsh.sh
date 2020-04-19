@@ -18,7 +18,11 @@ if [ ! "$CDIR" = "$zsh_dir" ]; then
   echo $CDIR > $CDIR/.zsh_dir
 fi
 
+mkdir -p $XDG_DATA_HOME/zsh
+
 export ZDOTDIR=$CDIR
 export PATH=$CDIR/$zshbin/bin:$PATH
+export SAVEHIST=10000
+export HISTFILE=$XDG_DATA_HOME/zsh/history
 
 $CDIR/$zshbin/bin/zsh "$@"

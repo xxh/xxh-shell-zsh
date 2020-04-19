@@ -132,4 +132,4 @@ for pluginrc_file in $(find $CURRENT_DIR/../../../plugins/xxh-plugin-*/build -ty
   fi
 done
 
-./zsh.sh $EXECUTE_FILE "${EXECUTE_COMMAND[@]}"
+$CURRENT_DIR/zsh.sh $EXECUTE_FILE "${EXECUTE_COMMAND[@]}"

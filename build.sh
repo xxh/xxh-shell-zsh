@@ -24,7 +24,7 @@ done
 cp $CDIR/zshrc $build_dir/.zshrc
 
 distfile=zsh-5.8-linux-x86_64
-url="https://github.com/romkatv/zsh-bin/releases/download/v3.0.1/$distfile.tar.gz"
+url="https://github.com/romkatv/zsh-bin/releases/download/v4.0.1/$distfile.tar.gz"
 tarname=`basename $url`
 
 cd $build_dir

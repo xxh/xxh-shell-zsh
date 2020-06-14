@@ -15,7 +15,7 @@ done
 build_dir=$CDIR/build
 
 rm -rf $build_dir
-mkdir -p $build_dir
+mkdir -p $build_dir/zsh-bin
 
 for f in entrypoint.sh zsh.sh
 do
@@ -27,7 +27,7 @@ distfile=zsh-5.8-linux-x86_64
 url="https://github.com/romkatv/zsh-bin/releases/download/v4.0.1/$distfile.tar.gz"
 tarname=`basename $url`
 
-cd $build_dir
+cd $build_dir/zsh-bin
 
 [ $QUIET ] && arg_q='-q' || arg_q=''
 [ $QUIET ] && arg_s='-s' || arg_s=''
@@ -42,5 +42,4 @@ else
 fi
 
 tar -xzf $tarname
-mv $distfile zsh-bin
 rm $tarname

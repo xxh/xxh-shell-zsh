@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 CDIR="$(cd "$(dirname "$0")" && pwd)"
 

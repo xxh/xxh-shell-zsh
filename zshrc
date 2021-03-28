@@ -5,7 +5,7 @@ if [[ $XXH_VERBOSE == '2' ]]; then
 fi
 
 setopt +o nomatch
-for pluginrc_file in $(find $CURRENT_DIR/../../../../../plugins/*-zsh-*/build -type f -name '*pluginrc.zsh' -printf '%f\t%p\n' 2>/dev/null | sort -k1 | cut -f2); do
+for pluginrc_file in $(find $CURRENT_DIR/../../../../../plugins/*/build -type f -name '*pluginrc.zsh' -printf '%f\t%p\n' 2>/dev/null | sort -k1 | cut -f2); do
   if [[ -f $pluginrc_file ]]; then
     plugin_name=`basename $(dirname $(dirname $pluginrc_file))`
 

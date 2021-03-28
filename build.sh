@@ -23,9 +23,9 @@ do
 done
 cp $CDIR/zshrc $build_dir/.zshrc
 
-tag=v4.0.1
+# tag=$(curl --silent https://api.github.com/repos/romkatv/zsh-bin/releases/latest | grep '"tag_name":' | cut -d'"' -f4)
+tag=v3.0.1
 distfile=zsh-5.8-linux-x86_64
-tag=$(curl --silent https://api.github.com/repos/romkatv/zsh-bin/releases/latest | grep '"tag_name":' | cut -d'"' -f4)
 url="https://github.com/romkatv/zsh-bin/releases/download/$tag/$distfile.tar.gz"
 
 tarname=`basename $url`

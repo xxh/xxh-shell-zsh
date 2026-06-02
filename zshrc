@@ -4,6 +4,11 @@ if [[ $XXH_VERBOSE == '2' ]]; then
   echo Run $CURRENT_DIR/../../.zshrc
 fi
 
+# Fix plugins string to array conversion if it is passed as string
+if [[ -v plugins && "$plugins" == \(*\) ]]; then
+  eval "plugins=$plugins"
+fi
+
 setopt +o nomatch
 for pluginrc_file in $(find $CURRENT_DIR/../../../../../plugins/*/build -type f -name '*pluginrc.zsh' -printf '%f\t%p\n' 2>/dev/null | sort -k1 | cut -f2); do
   if [[ -f $pluginrc_file ]]; then
